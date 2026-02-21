@@ -5,14 +5,20 @@
     <loc>http://localhost:1313/post/</loc>
     <lastmod>2026-02-21T20:50:13+08:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-02-21T20:50:13+08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/</loc>
+    <lastmod>2026-02-21T20:50:13+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <lastmod>2026-02-21T20:50:13+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2026-02-21T20:50:13+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/p/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%9C%AC%E7%AE%97%E6%B3%95%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2026-02-21T20:50:13+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2026-02-21T18:30:19+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E5%BC%80%E5%A7%8B/</loc>
     <lastmod>2026-02-21T18:30:19+08:00</lastmod>
