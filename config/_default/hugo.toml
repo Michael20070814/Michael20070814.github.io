@@ -1,0 +1,21 @@
+baseURL                = "https://Michael20070814.github.io/"
+languageCode           = "zh-cn"
+title                  = "来时路杂记"
+theme = "stack"
+# Theme i18n support
+# See i18n folder for available languages
+defaultContentLanguage = "zh"
+# Set hasCJKLanguage to true if DefaultContentLanguage is a CJK language
+# This will make .Summary and .WordCount behave correctly
+hasCJKLanguage         = true
+
+
+[pagination]
+    pagerSize = 5
+
+[permalinks]
+    post = "/p/:slug/"
+    page = "/:slug/"
+
+[services.disqus]
+    shortname = "hugo-theme-stack"
