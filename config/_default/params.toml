@@ -1,14 +1,14 @@
 mainSections   = ["post"]
 rssFullContent = true
-favicon        = "img/avatar.png"
+favicon        = "img/avatar.jpg"
 
 [footer]
-    since = 2020
+    since = 2026
 
 [sidebar]
     emoji    = "✏️"
     subtitle = "山林从不向四季起誓，荣枯随缘"
-    avatar   = ""
+    avatar   = "img/avatar.jpg"
 
 [article]
     [article.license]
