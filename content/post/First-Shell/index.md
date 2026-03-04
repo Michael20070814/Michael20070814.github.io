@@ -2,6 +2,7 @@
 date = '2026-03-02T20:43:00+08:00'
 draft = false
 title = 'First Shell'
+tags = ["命令行"]
 
 +++
 

@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Missing-Semester-Class1\r本博客用于记录我对missing-semester的学习\n常用指令\rdate\r获取当前时间\necho\r把后面的第一个参数输出给终端\n1 echo hello 上述代码将输出hello\n1 echo $PATH 将咨询环境变量，找出路径，给出了echo指令的位置\n">
-<title>First Shell</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="一、 核心概念与定义\r数项级数：给定数列 ${x_n}$，其各项依次相加的表达式 $\\sum_{n=1}^{\\infty}x_n$ 称为数项级数（或无穷级数）。\n部分和 ($S_n$)：级数前 $n$ 项的和 $S_n = x_1 + x_2 + \\dots + x_n$ 。\n">
+<title>数项级数</title>
 
 
-<link rel="canonical" href="http://localhost:1313/p/first-shell/">
+<link rel="canonical" href="http://localhost:1313/p/%E6%95%B0%E9%A1%B9%E7%BA%A7%E6%95%B0/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
 
 
-<link rel="stylesheet" href="/scss/style.min.51bbf1ce24f77edff532a0abed84dd20364a30771816f60306d916a1f2e70719.css"><meta property='og:title' content="First Shell">
-<meta property='og:description' content="Missing-Semester-Class1\r本博客用于记录我对missing-semester的学习\n常用指令\rdate\r获取当前时间\necho\r把后面的第一个参数输出给终端\n1 echo hello 上述代码将输出hello\n1 echo $PATH 将咨询环境变量，找出路径，给出了echo指令的位置\n">
-<meta property='og:url' content='http://localhost:1313/p/first-shell/'>
+<link rel="stylesheet" href="/scss/style.min.51bbf1ce24f77edff532a0abed84dd20364a30771816f60306d916a1f2e70719.css"><meta property='og:title' content="数项级数">
+<meta property='og:description' content="一、 核心概念与定义\r数项级数：给定数列 ${x_n}$，其各项依次相加的表达式 $\\sum_{n=1}^{\\infty}x_n$ 称为数项级数（或无穷级数）。\n部分和 ($S_n$)：级数前 $n$ 项的和 $S_n = x_1 + x_2 + \\dots + x_n$ 。\n">
+<meta property='og:url' content='http://localhost:1313/p/%E6%95%B0%E9%A1%B9%E7%BA%A7%E6%95%B0/'>
 <meta property='og:site_name' content='来时路杂记'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='命令行' /><meta property='article:published_time' content='2026-03-02T20:43:00&#43;08:00'/><meta property='article:modified_time' content='2026-03-02T20:43:00&#43;08:00'/>
-<meta name="twitter:title" content="First Shell">
-<meta name="twitter:description" content="Missing-Semester-Class1\r本博客用于记录我对missing-semester的学习\n常用指令\rdate\r获取当前时间\necho\r把后面的第一个参数输出给终端\n1 echo hello 上述代码将输出hello\n1 echo $PATH 将咨询环境变量，找出路径，给出了echo指令的位置\n">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='数学分析' /><meta property='article:tag' content='整理' /><meta property='article:published_time' content='2026-03-03T19:44:14&#43;08:00'/><meta property='article:modified_time' content='2026-03-03T19:44:14&#43;08:00'/>
+<meta name="twitter:title" content="数项级数">
+<meta name="twitter:description" content="一、 核心概念与定义\r数项级数：给定数列 ${x_n}$，其各项依次相加的表达式 $\\sum_{n=1}^{\\infty}x_n$ 称为数项级数（或无穷级数）。\n部分和 ($S_n$)：级数前 $n$ 项的和 $S_n = x_1 + x_2 + \\dots + x_n$ 。\n">
     <link rel="shortcut icon" href="/img/avatar.jpg" />
 
     </head>
@@ -188,27 +188,13 @@
             <nav class="toc-nav" id="TableOfContents">
                 
   <ol>
-    <li><a href="#常用指令">常用指令</a>
+    <li>
       <ol>
-        <li><a href="#date">date</a></li>
-        <li><a href="#echo">echo</a></li>
-        <li><a href="#which">which</a></li>
-        <li><a href="#pwd">pwd</a></li>
-        <li><a href="#cd">cd</a></li>
-        <li><a href="#ls">ls</a></li>
-        <li><a href="#man">man</a></li>
-        <li><a href="#cat">cat</a></li>
-        <li><a href="#sudo">sudo</a></li>
-        <li><a href="#chmod">chmod</a></li>
-        <li><a href="#touch">touch</a></li>
-      </ol>
-    </li>
-    <li><a href="#一些小知识点">一些小知识点</a>
-      <ol>
-        <li><a href="#heading">&gt;</a></li>
-        <li><a href="#heading-1">&lt;</a></li>
-        <li><a href="#heading-2">|</a></li>
-        <li><a href="#一些特殊的符号若要写入文件需要用单引号包住双引号不行">一些特殊的符号若要写入文件需要用单引号包住，双引号不行</a></li>
+        <li><a href="#一-核心概念与定义">一、 核心概念与定义</a></li>
+        <li><a href="#二-级数的基本性质">二、 级数的基本性质</a></li>
+        <li><a href="#三-重要参考级数">三、 重要参考级数</a></li>
+        <li><a href="#四-正项级数的判别法">四、 正项级数的判别法</a></li>
+        <li><a href="#五常用判断技巧总结">五、常用判断技巧总结</a></li>
       </ol>
     </li>
   </ol>
@@ -231,7 +217,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/first-shell/">First Shell</a>
+            <a href="/p/%E6%95%B0%E9%A1%B9%E7%BA%A7%E6%95%B0/">数项级数</a>
         </h2>
     
         
@@ -253,7 +239,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published" datetime='2026-03-02T20:43:00&#43;08:00'>2026年3月2日星期一</time>
+                <time class="article-time--published" datetime='2026-03-03T19:44:14&#43;08:00'>2026年3月3日星期二</time>
             </div>
         
 
@@ -280,27 +266,13 @@
             <nav class="toc-nav">
                 
   <ol>
-    <li><a href="#常用指令">常用指令</a>
+    <li>
       <ol>
-        <li><a href="#date">date</a></li>
-        <li><a href="#echo">echo</a></li>
-        <li><a href="#which">which</a></li>
-        <li><a href="#pwd">pwd</a></li>
-        <li><a href="#cd">cd</a></li>
-        <li><a href="#ls">ls</a></li>
-        <li><a href="#man">man</a></li>
-        <li><a href="#cat">cat</a></li>
-        <li><a href="#sudo">sudo</a></li>
-        <li><a href="#chmod">chmod</a></li>
-        <li><a href="#touch">touch</a></li>
-      </ol>
-    </li>
-    <li><a href="#一些小知识点">一些小知识点</a>
-      <ol>
-        <li><a href="#heading">&gt;</a></li>
-        <li><a href="#heading-1">&lt;</a></li>
-        <li><a href="#heading-2">|</a></li>
-        <li><a href="#一些特殊的符号若要写入文件需要用单引号包住双引号不行">一些特殊的符号若要写入文件需要用单引号包住，双引号不行</a></li>
+        <li><a href="#一-核心概念与定义">一、 核心概念与定义</a></li>
+        <li><a href="#二-级数的基本性质">二、 级数的基本性质</a></li>
+        <li><a href="#三-重要参考级数">三、 重要参考级数</a></li>
+        <li><a href="#四-正项级数的判别法">四、 正项级数的判别法</a></li>
+        <li><a href="#五常用判断技巧总结">五、常用判断技巧总结</a></li>
       </ol>
     </li>
   </ol>
@@ -313,96 +285,75 @@
     <section class="article-content">
     
     
-    <h1 id="missing-semester-class1">Missing-Semester-Class1
-</h1><p>本博客用于记录我对missing-semester的学习</p>
-<h2 id="常用指令">常用指令
-</h2><h3 id="date">date
-</h3><p>获取当前时间</p>
-<h3 id="echo">echo
-</h3><p>把后面的第一个参数输出给终端</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> hello
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>上述代码将输出<code>hello</code></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$PATH</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>将咨询环境变量，找出路径，给出了echo指令的位置</p>
-<h3 id="which">which
-</h3><p>找出执行指令的位置</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">which <span class="nb">echo</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>输出：<code>/bin/echo</code></p>
-<h3 id="pwd">pwd
-</h3><p>输出当前工作目录</p>
-<h3 id="cd">cd
-</h3><p>进入指定工作目录，其中<code>.</code>表示进入当前这个目录，<code>..</code>表示回到上一个目录</p>
-<h3 id="ls">ls
-</h3><p>输出当前工作环境下所有文件与文件夹（不包含隐藏文件）</p>
-<p>如需输出隐藏文件需加后缀<code>-a</code></p>
-<p>若需要详细列出文件与文件夹信息，使用后缀<code>-l</code>，并且在后面加上文件名，获取指定文件信息</p>
-<h3 id="man">man
-</h3><p>获取对应指令的详细操作手册</p>
-<h3 id="cat">cat
-</h3><p>用于输出文件内容</p>
-<h3 id="sudo">sudo
-</h3><p>放在指令前，赋予根用户权限</p>
-<h3 id="chmod">chmod
-</h3><p>给文件改变权限</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod +x filename
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>使文件具有可执行权限</p>
-<h3 id="touch">touch
-</h3><p>更新文件的修改时间为现在的时间，如若文件不存在，则创建一个新文件</p>
-<h2 id="一些小知识点">一些小知识点
-</h2><h3 id="heading">&gt;
-</h3><p>用于把前面的内容存储到后面的文件中</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> hello &gt; hello.txt
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>可以把<code>hello</code>写入文件</p>
-<h3 id="heading-1">&lt;
-</h3><p>用于把文件内容进行输出</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat &lt; hello.txt
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>把文件的内容输出出来</p>
-<h3 id="heading-2">|
-</h3><p>把前面的指令的输出塞到后面程序的输入里面</p>
-<h3 id="一些特殊的符号若要写入文件需要用单引号包住双引号不行">一些特殊的符号若要写入文件需要用单引号包住，双引号不行
-</h3>
+    <h3 id="一-核心概念与定义">一、 核心概念与定义
+</h3><ul>
+<li>
+<p><strong>数项级数</strong>：给定数列 ${x_n}$，其各项依次相加的表达式 $\sum_{n=1}^{\infty}x_n$ 称为数项级数（或无穷级数）。</p>
+</li>
+<li>
+<p><strong>部分和 ($S_n$)</strong>：级数前 $n$ 项的和 $S_n = x_1 + x_2 + \dots + x_n$ 。</p>
+</li>
+<li>
+<p><strong>收敛与发散</strong>：</p>
+<ul>
+<li>
+<p>若部分和数列 ${S_n}$ 的极限存在（即 $\lim_{n\to\infty} S_n = S$），则称级数<strong>收敛</strong>，且 $S$ 为其和 。</p>
+</li>
+<li>
+<p>若极限不存在，则称级数<strong>发散</strong> 。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="二-级数的基本性质">二、 级数的基本性质
+</h3><p><strong>收敛的必要条件</strong>：若级数 $\sum x_n$ 收敛，则通项必趋于 0，即 $\lim_{n\to\infty} x_n = 0$ 。</p>
+
+    <blockquote>
+        <p><strong>注意</strong>：这只是必要条件而非充分条件。例如调和级数 $\sum \frac{1}{n}$ 虽然通项趋于 0，但它是发散的 。</p>
+
+    </blockquote>
+<ul>
+<li>
+<p><strong>线性性质</strong>：若 $\sum x_n$ 和 $\sum y_n$ 都收敛，则它们的线性组合 $\sum (\lambda x_n + \mu y_n)$ 也收敛 。</p>
+</li>
+<li>
+<p><strong>有限项原则</strong>：增加、去掉或改变级数中的<strong>有限项</strong>，不改变级数的敛散性 。</p>
+</li>
+<li>
+<p><strong>加括号性质</strong>：收敛级数任意加括号后得到的新级数仍收敛，且和不变 。</p>
+</li>
+</ul>
+<h3 id="三-重要参考级数">三、 重要参考级数
+</h3><p>在判别敛散性时，常作为“标尺”的两个级数：</p>
+<ol>
+<li>
+<p><strong>等比级数（几何级数）</strong> $\sum q^n$：当且仅当 $|q|&lt; 1$ 时收敛 。</p>
+</li>
+<li>
+<p><strong>p-级数</strong> $\sum \frac{1}{n^p}$：当且仅当 $p &gt; 1$ 时收敛 。</p>
+</li>
+</ol>
+<h3 id="四-正项级数的判别法">四、 正项级数的判别法
+</h3><p>正项级数是指各项均满足 $x_n \ge 0$ 的级数 。</p>
+<ul>
+<li><strong>充要条件</strong>：正项级数收敛的充要条件是其部分和数列 ${S_n}$ <strong>有上界</strong> 。</li>
+<li><strong>比较判别法</strong>：设 $0 \le x_n \le y_n$ ：</li>
+<li>若“大”的级数 $\sum y_n$ 收敛，则“小”的级数 $\sum x_n$ 必收敛 。</li>
+<li>若“小”的级数 $\sum x_n$ 发散，则“大”的级数 $\sum y_n$ 必发散 。</li>
+<li><strong>极限形式的比较判别法</strong>：考虑 $\lim_{n\to\infty} \frac{x_n}{y_n} = l$ ：</li>
+<li>若 $l$ 为正实数，则 $\sum x_n$ 与 $\sum y_n$ <strong>同敛散</strong> 。</li>
+<li>若 $l = 0$ 且 $\sum y_n$ 收敛，则 $\sum x_n$ 收敛 。</li>
+<li>若 $l = +\infty$ 且 $\sum y_n$ 发散，则 $\sum x_n$ 发散 。</li>
+</ul>
+<h3 id="五常用判断技巧总结">五、常用判断技巧总结
+</h3><p>判断级数敛散性的思路：</p>
+<ol>
+<li>先看通项是否→0（不趋于0直接发散）</li>
+<li>能求部分和就直接求极限</li>
+<li>正项级数 → 用比较判别法或其极限形式   （与 1/n^p 或 q^n 比较）</li>
+<li>通项含阶乘/幂次 → 后续章节的比值/根值判别法</li>
+</ol>
+
 </section>
 
 
@@ -410,7 +361,9 @@
     
     <section class="article-tags">
         
-            <a href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/">命令行</a>
+            <a href="/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/">数学分析</a>
+        
+            <a href="/tags/%E6%95%B4%E7%90%86/">整理</a>
         
     </section>
 
