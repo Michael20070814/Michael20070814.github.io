@@ -1,6 +1,7 @@
 +++
 date = '2026-03-03T19:44:14+08:00'
 draft = false
+math = true
 title = '数项级数'
 tags = ["数学分析", "整理"]
 
